@@ -3,12 +3,17 @@ namespace PhpParser\Model\Type;
 
 use Parser\Model\Raw;
 use Parser\Model\Regex;
+use Parser\Model\VariableInterface;
+use Parser\Model\ObjectInterface;
 
-class ArrayObj extends Raw {
+class ArrayObj extends Raw implements VariableInterface, ObjectInterface {
 	public function __construct( $code, $vector, $name = 'Array' ) {
 		parent::__construct( $code, $vector, $name );
 		$this->pattern = array( '=>', array( '),', ';' ) );
 		$this->lookBehind = true;
+	}
+	public function getName() {
+		return $this->name;
 	}
 	public function push( $value ) {
 		$code = $this->nodeCode;
