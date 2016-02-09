@@ -1,6 +1,7 @@
 <?php
-namespace Moduler\Model;
+namespace PhpParser\Model;
 
+use Parser\Model\Parser;
 use Parser\Model\Vector;
 use PhpParser\Model\Assign\Variable;
 use PhpParser\Model\Comment\CommentBlock;
