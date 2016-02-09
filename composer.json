@@ -1,0 +1,28 @@
+{
+    "name":         "elmosgot/code-parser",
+    "description":  " Parse your code into a tree view, make changes to the wanted part and write back to the source file.",
+    "type":         "library",
+    "homepage":     "https://github.com/elmosgot/code-parser",
+    "keywords": [
+        "zf2",
+        "parser"
+    ],
+    "authors": [
+        {
+            "name":      "Elwin Schotanus",
+            "email":     "elwin@toc-goldratt.com",
+            "homepage":  "http://www.ingenium-studios.com/",
+            "role":      "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Parser\\": "./library/Parser",
+            "PhpParser\\": "./library/PhpParser"
+        }
+    }
+}
